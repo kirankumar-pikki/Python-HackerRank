@@ -1,0 +1,11 @@
+n=int(input())
+nlist=[]
+for _ in range(n):
+    name=input()
+    grade=float(input())
+    nlist.append([name,grade])
+grades=[s[1] for s in nlist]
+second_lowest=sorted(set(grades))
+for student in sorted(nlist):
+    if student[1]==second_lowest[1]:
+        print(student[0])
